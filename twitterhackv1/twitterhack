@@ -1,0 +1,347 @@
+#!/bin/bash
+
+##### hacking twitter ######
+
+
+##### big logo startup #####
+
+IP=${1:-"104.244.42.1"}
+pl() { 
+
+printf "\033[1;31m ________________________________________________________________________\n"
+printf " |                                                                      |\n"
+printf " |                             \033[1;34m twitter ded      \033[1;31m                       |\n"
+printf " |______________________________________________________________________|\n"
+printf "\033[0m\n"
+sleep 5
+echo
+
+}
+
+#### lol ####
+b() {
+local i
+local m=${1:-2}
+local d=${2:-0.2}
+local td=${3:-"."}
+local do=${4:-"#"}
+
+
+   echo -en "["
+    for i in `seq 1 $m`
+      do
+	echo -en "$td"
+    done
+
+    echo -en "]\0015["
+     for i in `seq 1 $m`
+	do
+	  echo -en "$do"
+	sleep ${d}
+     done
+	echo 
+}
+
+#### bigger lol ####
+l() {
+w= sleep 0.1
+
+printf "[*] Scanning for IP address!\n"
+$w
+b 10
+printf "[*] FOUND! \n"
+sleep 2
+printf "\033[1;36mFound host @$IP\n"
+printf "\033[0m"
+}
+
+#####
+
+startUp() {
+pl
+echo  "Loading assets..."
+b 30 
+echo done
+echo "Loading tools..."
+b 30
+echo done
+echo  "Loading NMAP..."
+b 30
+echo done
+echo "Loading HYDRA..."
+b 30
+echo done
+echo "Getting packets..."
+b 30
+b 30
+echo done
+printf "\033[1;33m[*] Startup complete!\n"
+printf "[*] Welcome!\n"
+printf "\033[0m - Enter commands here! Need help? type: help\n"
+}
+
+collectData() {
+sleep 1.5
+printf "\033[1;33m[*] Attacking databases!\033[0m\n"
+b 30
+b 30
+echo "[*] Extracting data to /output/data/all.txt on Desktop"
+cd ~/Desktop
+mkdir output
+cd output
+mkdir data
+cd data
+mkfile -n 8k all.txt
+echo "lol bitch u thought" > all.txt
+}
+
+soon() {
+  echo "Command not found or not implemented yet!"
+}
+
+################# FILEPATHS ####################
+
+bin() {
+read -p "root@104.244.42.1:/bin " i
+case $i in *) printf "\033[1;31mNot implemented yet!\033[0m\n";;
+esac
+}
+
+etc() {
+read -p "root@104.244.42.1:/etc " i
+case $i in *) printf "\033[1;31mNot implemented yet!\033[0m\n";;
+esac
+}
+
+libtt() {
+read -p "root@104.244.42.1:/lib32 " i
+case $i in *) printf "\033[1;31mNot implemented yet!\033[0m\n";;
+esac
+}
+
+media() {
+read -p "root@104.244.42.1:/media " i
+case $i in *) printf "\033[1;31mNot implemented yet!\033[0m\n";;
+esac
+}
+
+runfp() {
+read -p "root@104.244.42.1:/run " i
+case $i in *) printf "\033[1;31mNot implemented yet!\033[0m\n";;
+esac
+}
+
+sysfp() {
+read -p "root@104.244.42.1:/sys " i
+case $i in *) printf "\033[1;31mNot implemented yet!\033[0m\n";;
+esac
+}
+
+usrfp() {
+read -p "root@104.244.42.1:/usr " i
+case $i in *) printf "\033[1;31mNot implemented yet!\033[0m\n";;
+esac
+}
+
+bootfp() {
+read -p "root@104.244.42.1:/boot " i
+case $i in *) printf "\033[1;31mNot implemented yet!\033[0m\n";;
+esac
+}
+
+homefp() {
+read -p "root@104.244.42.1:/home " i
+case $i in *) printf "\033[1;31mNot implemented yet!\033[0m\n";;
+esac
+}
+
+libsf() {
+read -p "root@104.244.42.1:/lib64 " i
+case $i in *) printf "\033[1;31mNot implemented yet!\033[0m\n";;
+esac
+}
+
+mntfp() {
+read -p "root@104.244.42.1:/mnt " i 
+case $i in *) printf "\033[1;31mNot implemented yet!\033[0m\n";;
+esac
+}
+
+procfp() {
+read -p "root@104.244.42.1:/proc " i
+case $i in *) printf "\033[1;31mNot implemented yet!\033[0m\n";;
+esac
+}
+
+sbinfp() { 
+read -p "root@104.244.42.1:/sbin " i
+case $i in *) printf "\033[1;31mNot implemented yet!\033[0m\n";;
+esac
+}
+
+tmpfp() {
+read -p "root@104.244.42.1:/tmp " i
+case $i in *) printf "\033[1;31mNot implemented yet!\033[0m\n";;
+esac
+}
+
+devfp() {
+read -p "root@104.244.42.1:/dev " i
+case $i in *) printf "\033[1;31mNot implemented yet!\033[0m\n";;
+esac
+}
+
+libfp() {
+read -p "root@104.244.42.1:/lib " i
+case $i in *) printf "\033[1;31mNot implemented yet!\033[0m\n";;
+esac
+}
+libxtt() {
+read -p "root@104.244.42.1:/libx32 " i
+case $i in *) printf "\033[1;31mNot implemented yet!\033[0m\n";;
+esac
+}
+
+optfp() {
+read -p "root@104.244.42.1:/opt " i
+case $i in *) printf "\033[1;31mNot implemented yet!\033[0m\n";;
+esac
+}
+
+rootfp() {
+read -p "root@104.244.42.1:/root " i
+case $i in *) printf "\033[1;31mNot implemented yet!\033[0m\n";;
+esac
+}
+
+srvfp() {
+read -p "root@104.244.42.1:/srv " i
+case $i in *) printf "\033[1;31mNot implemented yet!\033[0m\n";;
+esac
+}
+
+#################### END #######################
+################## COMMANDS ####################
+copyifcn() {
+   echo "eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500"
+   echo  "   inet 172.17.0.2  netmask 255.255.0.0  broadcast 172.17.255.255"
+   echo  "   ether 02:42:ac:11:00:02  txqueuelen 0  (Ethernet)"
+   echo  "   RX packets 2637  bytes 183175 (178.8 KiB)"
+   echo  "   RX errors 0  dropped 0  overruns 0  frame 0"
+   echo  "   TX packets 2718  bytes 175299 (171.1 KiB)"
+   echo  "   TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0"
+   echo "lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536"
+   echo  "   inet 127.0.0.1  netmask 255.0.0.0"
+   echo  "   loop  txqueuelen 1000  (Local Loopback)"
+   echo  "   RX packets 0  bytes 0 (0.0 B)"
+   echo  "   RX errors 0  dropped 0  overruns 0  frame 0"
+   echo  "   TX packets 0  bytes 0 (0.0 B)"
+   echo  "   TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0"
+}
+################################################
+main() {
+sleep 1.5
+echo "Looking for backdoors..."
+b 30
+printf "\033[1;34m[*] Connecting to mainframe...\033[0m\n"
+b 10
+echo login: admin
+echo password:
+read -t 5
+printf "\033[1;32m[*] Connected!\033[0m\n"
+echo bin    etc   lib32   media   run   sys   usr
+echo boot   home  lib64   mnt     proc  sbin  tmp
+echo dev    lib   libx32  opt     root  srv
+read -p "root@104.244.42.1:/# " args
+case $args in
+"ifconfig") copyifcn & exploit;;
+"cd bin") bin & exploit;;
+"cd etc") etc & exploit;;
+"cd lib32") libtt & exploit;;
+"cd media") media & exploit;;
+"cd run") runfp & exploit;;
+"cd sys") sysfp & exploit;;
+"cd usr") usrfp & exploit;;
+"cd boot") bootfp & exploit;;
+"cd home") homefp & exploit;;
+"cd lib64") libsbfp & exploit;;
+"cd mnt") mntfp & exploit;;
+"cd proc") procfp & exploit;;
+"cd sbin") sbinfp & exploit;;
+"cd tmp") tmpfp & exploit;;
+"cd dev") devfp & exploit;;
+"cd lib") libfp & exploit;;
+"cd libx32") libxttfp & exploit;;
+"cd opt") optfp & exploit;;
+"cd root") rootfp & exploit;;
+"cd srv") srvfp & exploit;;
+*) soon;;
+esac
+}
+
+exploit() {
+sleep 3
+echo To proceed and collect all data, type: co --all
+echo To proceed and only connect to the mainframe, type: connect
+echo To exit, type: exit
+read -p ">>>" input
+case $input in
+"co --all") collectData;;
+"connect") main;;
+"exit") sleep 1.5 & console;;
+"") sleep 0.5 & exploit;;
+" ") sleep 0.5 & exploit;;
+*) sleep 0.2 & nf;;
+esac 
+}
+
+vulSearch() {
+D=$((3+1))
+R=$(($RANDOM%$D))
+echo Searching for vulnerabilities @$IP
+b 40
+if [ $R == 3 ]
+then printf "\033[1;32m[*] Found vulnerability @$IP\033[0m\n" & exploit
+elif [ $R != 3 ]
+then printf "\033[1;31m[*] Failed to find vulnerability. Trying again.\033[0m\n" & sleep 3 & vulSearch 
+fi
+
+}
+
+hack() {
+l
+vulSearch
+}
+
+man() {
+echo "help : displays this page"
+echo "start : starts the hack "
+echo "exit : exits the program "
+}
+
+nf() {
+printf "\033[1;31mCommand not found!\033[0m\n"
+}
+
+console() {
+
+read -p ">>>" cmd
+
+case $cmd in 
+"help") man && console;;
+"start") hack && console;;
+"exit") exit;;
+"") console;;
+" ") console;;
+*) nf && console;;
+esac
+
+}
+
+
+#### epic hacc time ####
+clear
+startUp
+console
+
+
