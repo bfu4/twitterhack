@@ -1,2 +1,2 @@
 # twitterhack
-lol
+totally 100% the twitter hack
