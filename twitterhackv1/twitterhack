@@ -297,7 +297,7 @@ usergrab() {
   mkfile -n 8k UserOutput.txt
   for i in ${inp_array[$@]}
   do
-    echo "username: $i, password: ${rawr[$@]}"
+    echo "username: $i | password: askurmom69" >> UserOutput.txt
   done
 
   printf "\033[1;35m[*] Complete!\033[0m\n"
