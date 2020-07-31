@@ -86,13 +86,13 @@ printf "\033[1;33m[*] Attacking databases!\033[0m\n"
 b 30
 b 30
 echo "[*] Extracting data to /output/data/all.txt on Desktop"
-cd ~/Desktop
-mkdir output
-cd output
-mkdir data
-cd data
+ if [ ! -d ~/Desktop/output ]
+    then mkdir ~/Desktop/output
+      else
+        cd ~/Desktop/output
+  fi
 mkfile -n 8k all.txt
-echo "lol bitch u thought" > all.txt
+echo "lol bitch u thought" > database.txt
 }
 
 soon() {
@@ -247,7 +247,7 @@ printf "\033[1;34m[*] Connecting to mainframe...\033[0m\n"
 b 10
 echo login: admin
 echo password:
-read -t 5
+wait 3
 printf "\033[1;32m[*] Connected!\033[0m\n"
 echo bin    etc   lib32   media   run   sys   usr
 echo boot   home  lib64   mnt     proc  sbin  tmp
@@ -279,16 +279,29 @@ case $args in
 esac
 }
 
+usergrab() {
+  if [ ! -d ~/Desktop/output ]
+    then mkdir ~/Desktop/output
+      else
+        cd ~/Desktop/output/
+  fi
+  mkfile -n 8k UserOutput.txt
+  local goturass= "askyourmom69"
+  echo "username: $1, password: $goturass" > UserOutput.txt
+}
+
 exploit() {
 sleep 3
 echo To proceed and collect all data, type: co --all
 echo To proceed and only connect to the mainframe, type: connect
+echo "To retrieve user passwords, type: usergrab <username>"
 echo To exit, type: exit
 read -p ">>>" input
 case $input in
 "co --all") collectData;;
 "connect") main;;
 "exit") sleep 1.5 & console;;
+"usergrab $@") usergrab && exploit;;
 "") sleep 0.5 & exploit;;
 " ") sleep 0.5 & exploit;;
 *) sleep 0.2 & nf;;
