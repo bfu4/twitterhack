@@ -301,7 +301,7 @@ case $input in
 "co --all") collectData;;
 "connect") main;;
 "exit") sleep 1.5 & console;;
-"usergrab $@") usergrab && exploit;;
+"usergrab") usergrab;;
 "") sleep 0.5 & exploit;;
 " ") sleep 0.5 & exploit;;
 *) sleep 0.2 & nf;;
@@ -353,8 +353,9 @@ esac
 
 
 #### epic hacc time ####
-clear
-startUp
-console
+##clear
+##startUp
+##console
+exploit
 
 
